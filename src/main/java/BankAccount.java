@@ -7,8 +7,12 @@ public class BankAccount {
     private int balance;
 
     //Constructor
-    public BankAccount(){
-
+    public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber, int inputBalance){
+        this.firstName = inputFirstName;
+        this.lastName = inputLastName;
+        this.dateOfBirth = inputDateOfBirth;
+        this.accountNumber = inputAccountNumber;
+        this.balance = inputBalance;
     }
 
     //Getters and Setters
