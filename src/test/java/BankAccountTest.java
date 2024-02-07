@@ -105,6 +105,12 @@ public class BankAccountTest {
         String actual = bankAccount.getAccountType();
         assertThat(actual).isEqualTo(newAccountType);
     }
+    @Test
+    public void canSetOverdraft(){
+        int newOverdraft = 500;
+        bankAccount.setOverdraft(newOverdraft);
+        assertThat(bankAccount.getOverdraft()).isEqualTo(newOverdraft);
+    }
 
     //Now test other methods
     @Test
