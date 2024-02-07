@@ -6,6 +6,9 @@ public class BankAccount {
     private int accountNumber;
     private int balance;
 
-    
+    //Constructor
+    public BankAccount(){
+        
+    }
 
 }
