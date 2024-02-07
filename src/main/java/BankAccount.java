@@ -16,8 +16,6 @@ public class BankAccount {
     }
 
     //Getters and Setters
-
-
     public String getFirstName() {
         return firstName;
     }
@@ -52,4 +50,7 @@ public class BankAccount {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+
+    //Other Methods
+    
 }
