@@ -55,4 +55,7 @@ public class BankAccount {
     public void deposit(int amount){
         this.balance += amount;
     }
+    public void withdrawal(int amount){
+        this.balance -= amount;
+    }
 }
