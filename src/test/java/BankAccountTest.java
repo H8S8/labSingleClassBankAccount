@@ -16,10 +16,12 @@ public class BankAccountTest {
     //This is hard coded as zero in the BankAccount constructor
     //Include this variable to help with testing, if the hardcoded value is changed remember to change it here as well
     private int initialBalance = 0;
+    private String initialAccountType = "Savings";
 
     @BeforeEach
     public void setUp(){
-        bankAccount = new BankAccount(initialFirstName, initialLastName, initialDateOfBirth, initialAccountNumber);
+        bankAccount = new BankAccount(initialFirstName, initialLastName, initialDateOfBirth, initialAccountNumber,
+                initialAccountType);
     }
 
     //Test all getter functions first
@@ -117,6 +119,5 @@ public class BankAccountTest {
         bankAccount.payInterest();
         //If the balance was initially 500, we would expect it to become 525 after adding 5% interest
         assertThat(bankAccount.getBalance()).isEqualTo(525);
-
     }
 }

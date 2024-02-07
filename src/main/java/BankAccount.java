@@ -5,14 +5,17 @@ public class BankAccount {
     private String dateOfBirth;
     private int accountNumber;
     private int balance; //In pennies
+    private String accountType;
 
     //Constructor
-    public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber){
+    public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber,
+                       String inputAccountType){
         this.firstName = inputFirstName;
         this.lastName = inputLastName;
         this.dateOfBirth = inputDateOfBirth;
         this.accountNumber = inputAccountNumber;
         this.balance = 0;
+        this.accountType = inputAccountType;
     }
 
     //Getters and Setters
@@ -51,6 +54,13 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    public String getAccountType() {
+        return accountType;
+    }
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
     //Other Methods
     public void deposit(int amount){
         this.balance += amount;
@@ -61,4 +71,5 @@ public class BankAccount {
     public void payInterest(){
         this.balance = (int)Math.round(this.balance * 1.05);
     }
+
 }
