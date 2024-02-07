@@ -56,6 +56,11 @@ public class BankAccountTest {
         String actual = bankAccount.getAccountType();
         assertThat(actual).isEqualTo(initialAccountType);
     }
+    @Test
+    public void canGetOverdraft(){
+        assertThat(bankAccount.getOverdraft()).isEqualTo(initialOverdraft);
+    }
+
     //Now we have confirmed that the getter functions work, we can test the setters
 
     @Test
