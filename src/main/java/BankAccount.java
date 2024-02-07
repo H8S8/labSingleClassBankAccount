@@ -68,7 +68,11 @@ public class BankAccount {
         this.balance += amount;
     }
     public void withdrawal(int amount){
-        this.balance -= amount;
+        if(this.balance - amount < overdraft * -1){
+            this.balance = overdraft * -1;
+        }else {
+            this.balance -= amount;
+        }
     }
     public void payInterest(){
         if(this.accountType.equals("Current")){
