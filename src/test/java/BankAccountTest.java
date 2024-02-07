@@ -93,6 +93,13 @@ public class BankAccountTest {
         int actual = bankAccount.getAccountNumber();
         assertThat(actual).isEqualTo(newBalance);
     }
+    @Test
+    public void canSetAccountType(){
+        String newAccountType = "Current";
+        bankAccount.setAccountType(newAccountType);
+        String actual = bankAccount.getAccountType();
+        assertThat(actual).isEqualTo(newAccountType);
+    }
 
     //Now test other methods
     @Test
