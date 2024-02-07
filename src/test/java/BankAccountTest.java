@@ -122,14 +122,15 @@ public class BankAccountTest {
         bankAccount.withdrawal(amount);
         assertThat(bankAccount.getBalance()).isEqualTo(expectedBalance);
     }
-    @Test
-    public void canPayInterest(){
-        //This checks that 5% interest is added (as defined in the function)
-        bankAccount.setBalance(500);
-        bankAccount.payInterest();
-        //If the balance was initially 500, we would expect it to become 525 after adding 5% interest
-        assertThat(bankAccount.getBalance()).isEqualTo(525);
-    }
+    //Old payInterest Test function
+//    @Test
+//    public void canPayInterest(){
+//        //This checks that 5% interest is added (as defined in the function)
+//        bankAccount.setBalance(500);
+//        bankAccount.payInterest();
+//        //If the balance was initially 500, we would expect it to become 525 after adding 5% interest
+//        assertThat(bankAccount.getBalance()).isEqualTo(525);
+//    }
     @Test
     public void canPayInterestCurrent(){
         //This checks that 5% interest is added (as defined in the function)

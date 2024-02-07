@@ -69,7 +69,12 @@ public class BankAccount {
         this.balance -= amount;
     }
     public void payInterest(){
-        this.balance = (int)Math.round(this.balance * 1.05);
+        if(this.accountType.equals("Current")){
+            this.balance = (int) Math.round(this.balance * 1.05);
+        }
+        if(this.accountType.equals("Savings")){
+            this.balance = (int) Math.round(this.balance * 1.10);
+        }
     }
 
 }
