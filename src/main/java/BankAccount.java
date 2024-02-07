@@ -63,6 +63,13 @@ public class BankAccount {
         this.accountType = accountType;
     }
 
+    public int getOverdraft() {
+        return overdraft;
+    }
+    public void setOverdraft(int overdraft) {
+        this.overdraft = overdraft;
+    }
+
     //Other Methods
     public void deposit(int amount){
         this.balance += amount;
