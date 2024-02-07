@@ -52,5 +52,7 @@ public class BankAccount {
     }
 
     //Other Methods
-    
+    public void deposit(int amount){
+        this.balance += amount;
+    }
 }
