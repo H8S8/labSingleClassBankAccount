@@ -26,4 +26,28 @@ public class BankAccountTest {
         String actual = bankAccount.getFirstName();
         assertThat(actual).isEqualTo(initialFirstName);
     }
+
+    @Test
+    public void canGetLastName(){
+        String actual = bankAccount.getLastName();
+        assertThat(actual).isEqualTo(initialLastName);
+    }
+
+    @Test
+    public void canGetDateOfBirth(){
+        String actual = bankAccount.getDateOfBirth();
+        assertThat(actual).isEqualTo(initialDateOfBirth);
+    }
+
+    @Test
+    public void canGetAccountNumber(){
+        int actual = bankAccount.getAccountNumber();
+        assertThat(actual).isEqualTo(initialAccountNumber);
+    }
+
+    @Test
+    public void canGetBalance(){
+        int actual = bankAccount.getBalance();
+        assertThat(actual).isEqualTo(initialBalance);
+    }
 }
