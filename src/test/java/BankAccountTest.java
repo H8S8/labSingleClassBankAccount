@@ -1,6 +1,5 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class BankAccountTest {
@@ -131,4 +130,23 @@ public class BankAccountTest {
         //If the balance was initially 500, we would expect it to become 525 after adding 5% interest
         assertThat(bankAccount.getBalance()).isEqualTo(525);
     }
+    @Test
+    public void canPayInterestCurrent(){
+        //This checks that 5% interest is added (as defined in the function)
+        bankAccount.setBalance(500);
+        bankAccount.setAccountType("Current");
+        bankAccount.payInterest();
+        //If the balance was initially 500, we would expect it to become 525 after adding 5% interest
+        assertThat(bankAccount.getBalance()).isEqualTo(525);
+    }
+    @Test
+    public void canPayInterestSavings(){
+        //This checks that 5% interest is added (as defined in the function)
+        bankAccount.setBalance(500);
+        bankAccount.setAccountType("Savings");
+        bankAccount.payInterest();
+        //If the balance was initially 500, we would expect it to become 550 after adding 10% interest
+        assertThat(bankAccount.getBalance()).isEqualTo(550);
+    }
 }
+
