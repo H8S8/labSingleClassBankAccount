@@ -6,16 +6,18 @@ public class BankAccount {
     private int accountNumber;
     private int balance; //In pennies
     private String accountType;
+    private int overdraft;
 
     //Constructor
     public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber,
-                       String inputAccountType){
+                       String inputAccountType, int inputOverdraft){
         this.firstName = inputFirstName;
         this.lastName = inputLastName;
         this.dateOfBirth = inputDateOfBirth;
         this.accountNumber = inputAccountNumber;
         this.balance = 0;
         this.accountType = inputAccountType;
+        this.overdraft = inputOverdraft;
     }
 
     //Getters and Setters

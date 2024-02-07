@@ -16,11 +16,12 @@ public class BankAccountTest {
     //Include this variable to help with testing, if the hardcoded value is changed remember to change it here as well
     private int initialBalance = 0;
     private String initialAccountType = "Savings";
+    private int initialOverdraft = 20;
 
     @BeforeEach
     public void setUp(){
         bankAccount = new BankAccount(initialFirstName, initialLastName, initialDateOfBirth, initialAccountNumber,
-                initialAccountType);
+                initialAccountType, initialOverdraft);
     }
 
     //Test all getter functions first
