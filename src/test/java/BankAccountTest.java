@@ -51,7 +51,11 @@ public class BankAccountTest {
         int actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(initialBalance);
     }
-
+    @Test
+    public void canGetAccountType(){
+        String actual = bankAccount.getAccountType();
+        assertThat(actual).isEqualTo(initialAccountType);
+    }
     //Now we have confirmed that the getter functions work, we can test the setters
 
     @Test
