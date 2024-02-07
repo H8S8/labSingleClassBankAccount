@@ -12,6 +12,9 @@ public class BankAccountTest {
     private String initialLastName = "Riley";
     private String initialDateOfBirth = "01/01/1900";
     private int initialAccountNumber = 123456789;
+
+    //This is hard coded as zero in the BankAccount constructor
+    //Include this variable to help with testing, if the hardcoded value is changed remember to change it here as well
     private int initialBalance = 0;
 
     @BeforeEach
