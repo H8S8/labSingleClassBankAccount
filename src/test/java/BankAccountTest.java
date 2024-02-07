@@ -12,11 +12,11 @@ public class BankAccountTest {
     private String initialLastName = "Riley";
     private String initialDateOfBirth = "01/01/1900";
     private int initialAccountNumber = 123456789;
-    private int initialBalance = 500;
+    private int initialBalance = 0;
 
     @BeforeEach
     public void setUp(){
-        bankAccount = new BankAccount(initialFirstName, initialLastName, initialDateOfBirth, initialAccountNumber, initialBalance);
+        bankAccount = new BankAccount(initialFirstName, initialLastName, initialDateOfBirth, initialAccountNumber);
     }
 
     //Test all getter functions first
@@ -26,28 +26,62 @@ public class BankAccountTest {
         String actual = bankAccount.getFirstName();
         assertThat(actual).isEqualTo(initialFirstName);
     }
-
     @Test
     public void canGetLastName(){
         String actual = bankAccount.getLastName();
         assertThat(actual).isEqualTo(initialLastName);
     }
-
     @Test
     public void canGetDateOfBirth(){
         String actual = bankAccount.getDateOfBirth();
         assertThat(actual).isEqualTo(initialDateOfBirth);
     }
-
     @Test
     public void canGetAccountNumber(){
         int actual = bankAccount.getAccountNumber();
         assertThat(actual).isEqualTo(initialAccountNumber);
     }
-
     @Test
     public void canGetBalance(){
         int actual = bankAccount.getBalance();
         assertThat(actual).isEqualTo(initialBalance);
+    }
+
+    //Now we have confirmed that the getter functions work, we can test the setters
+
+    @Test
+    public void canSetFirstName(){
+        String newFirstName = "Matthew";
+        bankAccount.setFirstName(newFirstName);
+        String actual = bankAccount.getFirstName();
+        assertThat(actual).isEqualTo(newFirstName);
+    }
+    @Test
+    public void canSetLastName(){
+        String newLastName = "Louis";
+        bankAccount.setLastName(newLastName);
+        String actual = bankAccount.getLastName();
+        assertThat(actual).isEqualTo(newLastName);
+    }
+    @Test
+    public void canSetDateOfBirth(){
+        String newDateOfBirth = "06/02/2024";
+        bankAccount.setDateOfBirth(newDateOfBirth);
+        String actual = bankAccount.getDateOfBirth();
+        assertThat(actual).isEqualTo(newDateOfBirth);
+    }
+    @Test
+    public void canSetAccountNumber(){
+        int newAccountNumber = 100000000;
+        bankAccount.setAccountNumber(newAccountNumber);
+        int actual = bankAccount.getAccountNumber();
+        assertThat(actual).isEqualTo(newAccountNumber);
+    }
+    @Test
+    public void canSetBalance(){
+        int newBalance = 500;
+        bankAccount.setAccountNumber(newBalance);
+        int actual = bankAccount.getAccountNumber();
+        assertThat(actual).isEqualTo(newBalance);
     }
 }
