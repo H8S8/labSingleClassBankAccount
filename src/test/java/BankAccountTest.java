@@ -110,4 +110,8 @@ public class BankAccountTest {
         bankAccount.withdrawal(amount);
         assertThat(bankAccount.getBalance()).isEqualTo(expectedBalance);
     }
+    @Test
+    public void canAddInterest(){
+
+    }
 }

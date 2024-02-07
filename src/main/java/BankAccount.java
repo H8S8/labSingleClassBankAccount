@@ -4,7 +4,7 @@ public class BankAccount {
     private String lastName;
     private String dateOfBirth;
     private int accountNumber;
-    private int balance;
+    private int balance; //In pennies
 
     //Constructor
     public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber){
@@ -57,5 +57,8 @@ public class BankAccount {
     }
     public void withdrawal(int amount){
         this.balance -= amount;
+    }
+    public void payInterest(){
+        this.balance = (int)Math.round(this.balance * 1.05);
     }
 }
