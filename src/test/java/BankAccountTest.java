@@ -87,4 +87,20 @@ public class BankAccountTest {
         int actual = bankAccount.getAccountNumber();
         assertThat(actual).isEqualTo(newBalance);
     }
+
+    //Now test other methods
+    @Test
+    public void canDeposit(){
+        int amount = 20;
+
+        //Find expected balance after deposit
+        int expectedBalance = bankAccount.getBalance() + amount;
+
+        //Make deposit
+        bankAccount.deposit(amount);
+        int actualBalance = bankAccount.getBalance();
+
+        //Check if current balance is as expected
+        assertThat(actualBalance).isEqualTo(expectedBalance);
+    }
 }
