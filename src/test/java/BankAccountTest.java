@@ -127,10 +127,21 @@ public class BankAccountTest {
         //Check if current balance is as expected
         assertThat(actualBalance).isEqualTo(expectedBalance);
     }
+    //Old canWithdraw Test
+//    @Test
+//    public void canWithdraw(){
+//        int amount = 40;
+//        int expectedBalance = bankAccount.getBalance() - amount;
+//        bankAccount.withdrawal(amount);
+//        assertThat(bankAccount.getBalance()).isEqualTo(expectedBalance);
+//    }
     @Test
     public void canWithdraw(){
+        bankAccount.setBalance(10);
+        bankAccount.setOverdraft(10);
         int amount = 40;
-        int expectedBalance = bankAccount.getBalance() - amount;
+        int expectedBalance = -10;
+
         bankAccount.withdrawal(amount);
         assertThat(bankAccount.getBalance()).isEqualTo(expectedBalance);
     }
